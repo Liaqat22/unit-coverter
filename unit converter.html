@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unit converter</title>
+</head>
+<body>
+    <h1>unit converter</h1>
+    <h3><span>enter the number :</span></h3><input type="number" id="km" ><br><br>
+    
+     <span>output :</span><span id="meter"></span><br><br>
+    <button type="button" onclick="return convert()">km to meter</button>
+    <button type="button" onclick="return convert1()">meter to km</button><br><br>
+    <button type="button" onclick="return convert2()">km to mile</button>
+    <button type="button" onclick="return convert3()">mile to km</button><br><br>
+    <button type="button" onclick="return convert4()">feet to inches</button>
+    <button type="button" onclick="return convert5()">inches to feet</button>
+
+    <script>
+        convert = () =>{
+            a = (document.getElementById('km').value);
+            b = 1000;
+            document.getElementById('meter').innerHTML = `${a*b} m` ;
+        }
+        convert1= () =>{
+            a = (document.getElementById('km').value);
+            b = 1/1000;
+            document.getElementById('meter').innerHTML = `${a*b} km` ;
+        }
+        convert2= () =>{
+            a = (document.getElementById('km').value);
+            b = 0.621371;
+            document.getElementById('meter').innerHTML = `${a*b} mile` ;
+        }
+        convert3= () =>{
+            a = (document.getElementById('km').value);
+            b = 1.60934;
+            document.getElementById('meter').innerHTML = `${a*b} km` ;
+        }
+
+        convert4= () =>{
+            a = (document.getElementById('km').value);
+            b = 12;
+            document.getElementById('meter').innerHTML = `${a*b} inch` ;
+        }
+
+        convert5= () =>{
+            a = (document.getElementById('km').value);
+            b = 1/12;
+            document.getElementById('meter').innerHTML = `${a*b} feet` ;
+        }
+
+
+        
+    </script>
+</body>
+</html>
